@@ -1,21 +1,26 @@
 ﻿using System;
-
-namespace UserRegistration
+namespace RegularExpession
 {
-    internal class Program
+    class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            UserRegistrationRegex userRegistration = new UserRegistrationRegex();
-            Console.WriteLine("Enter your First Name: ");
-            string input = Console.ReadLine();
-            userRegistration.ValidFirstName(input);
-            Console.WriteLine("Enter your Last Name: ");
-            input = Console.ReadLine();
-            userRegistration.ValidLastName(input);
-            Console.WriteLine("Enter your Email: ");
-            input = Console.ReadLine();
-            userRegistration.ValidEmail(input);
+            UserRegistration userRegistration = new UserRegistration();
+            Console.WriteLine("Enter First name");
+            string FirstName = Console.ReadLine();
+            userRegistration.validFirstName(FirstName);
+
+            Console.WriteLine("Enter Last name");
+            string LastName = Console.ReadLine();
+            userRegistration.validLastName(LastName);
+
+            Console.WriteLine("Enter Email");
+            string Email = Console.ReadLine();
+            userRegistration.validEmail(Email);
+
+            Console.WriteLine("Enter Mobile Number");
+            string MobileNo = Console.ReadLine();
+            userRegistration.validMobileNo(MobileNo);
         }
     }
 }
