@@ -17,7 +17,8 @@ namespace RegularExpession
                 Console.WriteLine("5 for Password");
                 Console.WriteLine("6 for Password at least one Upper case");
                 Console.WriteLine("7 for Password at least one Number");
-                Console.WriteLine("8 for Exit");
+                Console.WriteLine("8 for Password at least one special char");
+                Console.WriteLine("9 for Exit");
                 choice = int.Parse(Console.ReadLine());
 
                 switch (choice)
@@ -49,22 +50,27 @@ namespace RegularExpession
                         break;
                     case 6:
                         Console.WriteLine("Enter Password");
-                        string Password1 = Console.ReadLine();
-                        userRegistration.validPasswordR2(Password1);
+                        string Password_1 = Console.ReadLine();
+                        userRegistration.validPasswordR2(Password_1);
                         break;
                     case 7:
                         Console.WriteLine("Enter Password");
-                        string Password2 = Console.ReadLine();
-                        userRegistration.validPasswordR3(Password2);
+                        string Password_2 = Console.ReadLine();
+                        userRegistration.validPasswordR3(Password_2);
                         break;
                     case 8:
+                        Console.WriteLine("Enter Password");
+                        string Password_3 = Console.ReadLine();
+                        userRegistration.validPasswordR4(Password_3);
+                        break;
+                    case 9:
                         Console.WriteLine("Thank you");
                         break;
                     default:
                         Console.WriteLine("Invalid Choice");
                         break;
                 }
-            } while (choice != 8);
+            } while (choice != 9);
         }
     }
 }
