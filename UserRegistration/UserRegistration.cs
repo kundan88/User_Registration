@@ -9,12 +9,13 @@ namespace RegularExpession
 {
     public class UserRegistration
     {
-        public Regex FirstNameR = new Regex(@"^[A-Z]{1}[a-zA-Z]{2,}$");
-        public Regex LastNameR = new Regex(@"^[A-Z]{1}[a-zA-Z]{2,}$");
-        public Regex EmailR = new Regex(@"^[a-z]{3,}([.]{1}[a-z]{3,})?@bl.co([.]{1}[a-z]{2})?$");
-        public Regex MobileNoR = new Regex(@"^[0-9]{2}[ ][6-9]{1}[0-9]{9}$");
-        public Regex PasswordR = new Regex(@"^[a-zA-Z0-9]{8,}$");
-        public Regex PasswordR2 = new Regex(@"^(?=.*[A-Z])[a-zA-Z0-9]{8,}$");
+        public Regex FirstNameR = new Regex("^[A-Z]{1}[a-zA-Z]{2,}$");
+        public Regex LastNameR = new Regex("^[A-Z]{1}[a-zA-Z]{2,}$");
+        public Regex EmailR = new Regex("^[a-z]{3,}([.]{1}[a-z]{3,})?@bl.co([.]{1}[a-z]{2})?$");
+        public Regex MobileNoR = new Regex("^[0-9]{2}[ ][6-9]{1}[0-9]{9}$");
+        public Regex PasswordR = new Regex("^[a-zA-Z0-9]{8,}$");
+        public Regex PasswordR2 = new Regex("^(?=.*[A-Z])[a-zA-Z0-9]{8,}$");
+        public Regex PasswordR3 = new Regex("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
 
         public void validFirstName(string FirstName)
         {
@@ -84,6 +85,18 @@ namespace RegularExpession
             else
             {
                 Console.WriteLine("{0} Password is not valid", Password2);
+            }
+        }
+        public void validPasswordR3(string Password3)
+        {
+
+            if (PasswordR3.IsMatch(Password3))
+            {
+                Console.WriteLine("{0} Password is valid", Password3);
+            }
+            else
+            {
+                Console.WriteLine("{0} Password is not valid", Password3);
             }
         }
     }
