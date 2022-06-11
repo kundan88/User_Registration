@@ -15,7 +15,11 @@ namespace RegularExpession
                 Console.WriteLine("3 for Email");
                 Console.WriteLine("4 for MobileNumber");
                 Console.WriteLine("5 for Password");
-                Console.WriteLine("6 for Exit");
+                Console.WriteLine("6 for Password at least one Upper case");
+                Console.WriteLine("7 for Password at least one Number");
+                Console.WriteLine("8 for Password at least one special char");
+                Console.WriteLine("9 for Check Email Validation");
+                Console.WriteLine("10 for Exit");
                 choice = int.Parse(Console.ReadLine());
 
                 switch (choice)
@@ -45,15 +49,34 @@ namespace RegularExpession
                         string Password = Console.ReadLine();
                         userRegistration.validPassword(Password);
                         break;
-                   
-                      case 6:
+                    case 6:
+                        Console.WriteLine("Enter Password");
+                        string Password_1 = Console.ReadLine();
+                        userRegistration.validPasswordR2(Password_1);
+                        break;
+                    case 7:
+                        Console.WriteLine("Enter Password");
+                        string Password_2 = Console.ReadLine();
+                        userRegistration.validPasswordR3(Password_2);
+                        break;
+                    case 8:
+                        Console.WriteLine("Enter Password");
+                        string Password_3 = Console.ReadLine();
+                        userRegistration.validPasswordR4(Password_3);
+                        break;
+                    case 9:
+                        Console.WriteLine("Enter Password");
+                        string CheckEmail = Console.ReadLine();
+                        userRegistration.validCheckEmailSample(CheckEmail);
+                        break;
+                    case 10:
                         Console.WriteLine("Thank you");
                         break;
-                        default:
+                    default:
                         Console.WriteLine("Invalid Choice");
                         break;
                 }
-            } while (choice != 6);
+            } while (choice != 10);
         }
     }
 }

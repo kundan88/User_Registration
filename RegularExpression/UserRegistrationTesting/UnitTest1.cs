@@ -30,13 +30,13 @@ namespace RegularExpressionTest
         [Test]
         public void Given_EmailId_When_valid_ShouldReturn_Valid()
         {
-            Result = userRegistration.validEmail("Kundan@bl.co.in");
+            Result = userRegistration.validEmail("kundan@bl.co.in");
             Assert.AreEqual("EmailId is valid", Result);
         }
         [Test]
         public void Given_MobileNo_When_valid_ShouldReturn_Valid()
         {
-            Result = userRegistration.validMobileNo("91 7410741141 ");
+            Result = userRegistration.validMobileNo("91 7410741141");
             Assert.AreEqual("MobileNo is valid", Result);
         }
         [Test]
@@ -44,6 +44,12 @@ namespace RegularExpressionTest
         {
             Result = userRegistration.validPassword("AsdFg123");
             Assert.AreEqual("Password is valid", Result);
+        }
+        [Test]
+        public void Given_Email_When_valid_ShouldReturn_Valid()
+        {
+            Result = userRegistration.validCheckEmailSample("abc-100@yahoo.com");
+            Assert.AreEqual("Email is valid", Result);
         }
     }
 }

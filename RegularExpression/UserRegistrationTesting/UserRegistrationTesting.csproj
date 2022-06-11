@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LamdaExpression\LamdaExpression.csproj" />
+    <ProjectReference Include="..\LamdaExpression\RegularExpression.csproj" />
   </ItemGroup>
 
 </Project>
